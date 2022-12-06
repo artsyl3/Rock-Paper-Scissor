@@ -19,13 +19,16 @@ function playRound(playerSelection, computerSelection){
                 console.log("You lose! Paper beats rock.")
                 x = "You lose! Paper beats rock.";
                 scoreCpu ++;
+                return("cpu wins")
             case "rock":
                 console.log("Nobody wins this round!")
                 x = "Nobody wins this round!";
+                return("tie")
             case "scissor":
                 console.log("You win! Rock beats scissor.")
                 x = "You win! Rock beats scissor."
                 scorePlayer ++;
+                return("player wins")
         }
     }
     if(playerSelection == "paper"){
@@ -33,14 +36,17 @@ function playRound(playerSelection, computerSelection){
             case "paper":
                 console.log("Nobody wins this round!")
                 x = "Nobody wins this round!";
+                return("tie");
             case "rock":
                 console.log("You win! Paper beats rock.")
                 x = "You win! Paper beats rock.";
                 scorePlayer ++;
+                return("player wins")
             case "scissor":
                 console.log("You lose! Scissors beats paper.")
                 x = "You lose! Scissors beats paper."
                 scoreCpu ++;
+                return("cpu wins")
         }
     }
     if(playerSelection == "scissor"){
@@ -49,13 +55,16 @@ function playRound(playerSelection, computerSelection){
                 console.log("You win! Scissors beats paper.")
                 x = "You win! Scissors beats paper.";
                 scorePlayer ++;
+                return("player wins")
             case "rock":
                 console.log("You lose! Rock beats scissor.")
                 x = "You lose! Rock beats scissor.";
                 scoreCpu ++;
+                return("cpu wins")
             case "scissors":
                 console.log("Nobody wins this round!")
                 x = "Nobody wins this round!";
+                return("tie")
         }
     }
 }
